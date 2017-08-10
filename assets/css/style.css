@@ -1,0 +1,17 @@
+.panel-header {
+	color: white;
+	background-color: #ff5739;
+	height: 34px;
+	font-family: 'Arvo', serif;
+	font-size: 24px;
+	padding-left: 10px;
+}
+.panel-default {
+	border: 1px solid #ff5739;
+}
+.jumbotron {
+	border: 1px solid #ff5739;
+}
+.btn {
+	border: 1px solid #ff5739;
+}
