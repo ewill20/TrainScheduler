@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 	<title>Train Schedules</title>
 </head>
@@ -16,7 +16,7 @@
 		<div class="jumbotron">
 			<div class="text-center">
 				<h1 class="display-3">Anytime is Train Time</h1>
-					<p class="lead">If This Train Is A Rockin' Don't Come A Bookin'</p>
+					<p class="lead">If This Train Is A Rockin' Don't Come A Searchin'</p>
 			</div>
 		</div>
 		<div class="row">
@@ -27,7 +27,7 @@
 						</div>
 					<div class="panel panel-body">
 
-				<table class="table">
+				<table class="table" id="trainTable">
   					<thead>
     					<tr>
       						<th>Train Name</th>
@@ -91,7 +91,7 @@
 					<label for="trainfreq">Frequency (min.)</label>
 					<input type="minutes" class="form-control" id="trainfreqinput" aria-describedby="train-freq" placeholder="">
 					</div>
-					<button class="btn btn-primary" type="submit">Submit</button>
+					<button class="btn btn-primary addTrain" type="submit">Submit</button>
 			</form>
 			</div>
 			</div>
@@ -102,8 +102,9 @@
 
 
 
-
-
+<script src="assets/javascript/scheduler.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js"></script>
 
 
 </body>
