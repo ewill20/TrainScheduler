@@ -1,6 +1,4 @@
 
-
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBmkmUjhFk-Gech0a8XixALdAMMk2qWwl8",
     authDomain: "trainscheduler-f2566.firebaseapp.com",
@@ -16,14 +14,14 @@
 
 
   // Sets up the variables for the timetable //
-    var trainName ="";
-    var destination ="";
-    var frequency ="";
-    var nextArrival ="";
-    var minutesAway ="";
+    var trainName = "";
+    var destination = "";
+    var frequency = "";
+    var nextArrival = "";
+    var minutesAway = "";
 
     // Add click listener for submit button //
-    $(".addTrain").on("click", function() {
+    $(".addTrain").on("click", function(event) {
       event.preventDefault();
 
       // Capture user inputed values to check against database //
@@ -33,10 +31,10 @@
       var nextArrival = $("#trainfreqinput").val().trim();
       var addTrain = {
         "trainName": trainName,
-        "destination": desination,
+        "destination": destination,
         "frequency": frequency,
         "nextArrival": nextArrival,
-      }
+      };
 
       console.log(addTrain);
 
@@ -45,8 +43,8 @@
         destination: destination,
         frequency: frequency,
         nextArrival: nextArrival,
-        dateAdded:
-        firebase.database.ServerValue.TIMESTAMP
+        // dateAdded:
+        // firebase.database.ServerValue.TIMESTAMP
 
       });
 
@@ -56,6 +54,7 @@
     });
 
     database.ref().on("child_added", function(childSnapshot) {
+
       console.log(childSnapshot.val().trainName);
       console.log(childSnapshot.val().destination);
       console.log(childSnapshot.val().frequency);
