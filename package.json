@@ -1,0 +1,19 @@
+{
+  "name": "trainscheduler",
+  "version": "1.0.0",
+  "description": "Train Scheduling App",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewill20/TrainScheduler.git"
+  },
+  "author": "Eric Willard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewill20/TrainScheduler/issues"
+  },
+  "homepage": "https://github.com/ewill20/TrainScheduler#readme"
+}

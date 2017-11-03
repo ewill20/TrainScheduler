@@ -12,18 +12,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-
-// Sets up the variables for the timetable //
-// var trainName = "";
-// var destination = "";
-// var frequency = "";
-// var nextArrival = "";
-// var minutesAway = "";
-// var now = moment()._d;
-// var then = $("#traintimeinput" + frequency);
-
-// moment.utc(moment(now, "DD/MM/YYYY HH:mm:ss").diff(moment(then, "DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss")
-
 // Add click listener for submit button //
 $(".addTrain").on("click", function (event) {
   event.preventDefault();
@@ -75,17 +63,17 @@ database.ref().on("child_added", function (childSnapshot) {
   var timeRemainder = moment().diff(moment.unix(trainTimeInput), "minutes") % trFrequency;
   var minutes = trFrequency - timeRemainder;
 
-  var nextTrainArrival = moment().add(minutes, "m").format("hh:mm A");
+  var nextTrainArrival = moment().add(minutes, "m").format('hh:mm A');
  
    console.log(minutes);
    console.log(nextTrainArrival);
-   console.log(moment().format("hh:mm A"));
+   console.log(moment().format('hh:mm A'));
    console.log(nextTrainArrival);
    console.log(moment().format("X"));
   
 
   // Appends the table with the data from Firebase //
-  $("#trainTable > tbody").append("<tr><td>" + trName + "</td><td>" + trDestination + "</td><td>" + trFrequency + "mins" + "</td><td>" + nextTrainArrival + "</td><td>" + minutes + "</td></tr>")
+  $("#trainTable > tbody").append("<tr><td>" + trName + "</td><td>" + trDestination + "</td><td>" + trFrequency + "mins" + "</td><td>" + nextTrainArrival +  "</td><td>" + minutes + "</td></tr>")
 
 });
 // Clears the input fields after submitted //
